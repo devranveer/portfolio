@@ -71,6 +71,17 @@
             background: var(--accent);
             color: #07110a;
         }
+        .project-screenshot {
+        display: block;
+        width: 100%;
+        max-height: 480px;
+        object-fit: contain;
+        object-position: center;
+        margin: 28px 0;
+        border: 1px solid #263b2d;
+        border-radius: 14px;
+        background: #101510;
+        }
     </style>
 </head>
 
@@ -90,6 +101,13 @@
             from 0 to 9. The project uses a Convolutional Neural Network
             (CNN) and ONNX Runtime Web for browser-based inference.
         </p>
+
+        <img
+            src="digit-recognition.png"
+            alt="Handwritten digit recognition application"
+            class="project-screenshot"
+            
+        >
 
         <div class="project-links">
             <a class="primary"

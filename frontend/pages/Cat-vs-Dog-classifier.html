@@ -71,6 +71,18 @@
             background: var(--accent);
             color: #07110a;
         }
+
+        .project-screenshot{
+        display: block;
+        width: 100%;
+        max-height: 480px;
+        object-fit: contain;
+        object-position: center;
+        margin: 28px 0;
+        border: 1px solid #263b2d;
+        border-radius: 14px;
+        background: #101510;
+        }
     </style>
 </head>
 
@@ -90,6 +102,12 @@
             input image contains a cat or a dog. The application uses
             a trained image model and ONNX Runtime Web for inference.
         </p>
+
+        <img
+            src="cat-vs-dog.png"
+            alt="Cat versus dog image classification application"
+            class="project-screenshot"
+        >
 
         <div class="project-links">
             <a class="primary"

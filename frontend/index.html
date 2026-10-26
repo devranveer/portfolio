@@ -20,7 +20,7 @@
 
 <body>
 
-    <!-- ================= HEADER ================= -->
+    <!-- HEADER -->
     <header class="header">
         <nav class="navbar container" aria-label="Main navigation">
 
@@ -54,7 +54,7 @@
 
     <main>
 
-        <!-- ================= HOME ================= -->
+        <!-- HOME -->
         <section class="hero container" id="home">
 
             <p class="eyebrow">
@@ -84,24 +84,44 @@
                 </a>
             </div>
 
+            <!-- SOCIAL LINKS WITH ICONS -->
             <div class="social-links">
+
                 <a
                     href="https://github.com/devranveer"
                     target="_blank"
                     rel="noopener noreferrer"
+                    aria-label="Visit my GitHub profile"
                 >
-                    GitHub ↗
+                    <img
+                        src="https://cdn.simpleicons.org/github/ffffff"
+                        alt=""
+                        width="22"
+                        height="22"
+                    >
+                    <span>GitHub ↗</span>
                 </a>
 
-                <!-- Replace # with your actual LinkedIn profile URL -->
+                
                 <a
-                    href="https://www.linkedin.com/in/ranveer-kumar-b472b4427?utm_source=share_via&utm_content=profile&utm_medium=member_android"
-                    id="linkedin-link"
+                    href="https://www.linkedin.com/in/ranveer-kumar-b472b4427/"
                     target="_blank"
                     rel="noopener noreferrer"
+                    aria-label="Visit my LinkedIn profile"
                 >
-                    LinkedIn ↗
+                <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="22"
+                    height="22"
+                    viewBox="0 0 24 24"
+                    fill="#0A66C2"
+                    aria-hidden="true"
+                >
+                <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.35V9h3.414v1.561h.049c.476-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 1 1 0-4.124 2.062 2.062 0 0 1 0 4.124zM3.56 9h3.558v11.452H3.56V9zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                </svg>
+                 <span>LinkedIn ↗</span>
                 </a>
+
             </div>
 
             <div class="hero-note">
@@ -111,7 +131,7 @@
         </section>
 
 
-        <!-- ================= ABOUT ================= -->
+        <!-- ABOUT -->
         <section class="section container" id="about">
 
             <p class="eyebrow">01 / ABOUT ME</p>
@@ -163,7 +183,7 @@
         </section>
 
 
-        <!-- ================= SKILLS ================= -->
+        <!-- SKILLS -->
         <section class="section container" id="skills">
 
             <p class="eyebrow">02 / SKILLS</p>
@@ -181,7 +201,6 @@
                     <h3>Programming</h3>
                     <div class="tags">
                         <span>Python</span>
-                        
                         <span>SQL</span>
                     </div>
                 </article>
@@ -191,7 +210,6 @@
                     <div class="tags">
                         <span>FastAPI</span>
                         <span>REST APIs</span>
-                        
                     </div>
                 </article>
 
@@ -210,7 +228,6 @@
                         <span>Pandas</span>
                         <span>Matplotlib</span>
                         <span>Scikit-learn</span>
-                        
                     </div>
                 </article>
 
@@ -238,7 +255,7 @@
         </section>
 
 
-        <!-- ================= PROJECTS ================= -->
+        <!-- PROJECTS -->
         <section class="section container" id="projects">
 
             <p class="eyebrow">03 / SELECTED WORK</p>
@@ -275,10 +292,7 @@
                     </div>
 
                     <div class="project-actions">
-                        <a
-                            href="pages/luxar.html"
-                            class="project-link"
-                        >
+                        <a href="pages/luxar.html" class="project-link">
                             View details ↗
                         </a>
                     </div>
@@ -391,7 +405,7 @@
         </section>
 
 
-        <!-- ================= CERTIFICATIONS ================= -->
+        <!-- CERTIFICATIONS -->
         <section class="section container" id="certifications">
 
             <p class="eyebrow">04 / CERTIFICATIONS</p>
@@ -407,7 +421,7 @@
                     </h3>
 
                     <p>
-                        DeepLearning.AI · Stanford Online
+                        DeepLearning.AI · Coursera
                     </p>
 
                     <p>
@@ -417,21 +431,21 @@
                     </p>
                 </div>
 
-                <!-- Add the actual certificate URL when available -->
-                <a
-                    href="#"
-                    class="project-link"
-                    id="certificate-link"
-                >
-                    View certificate ↗
-                </a>
+                <div class="project-actions">
+                    <a
+                        href="pages/certificates.html"
+                        class="project-link"
+                    >
+                        View Certificate ↗
+                    </a>
+                </div>
 
             </article>
 
         </section>
 
 
-        <!-- ================= CONTACT ================= -->
+        <!-- CONTACT -->
         <section class="section container" id="contact">
 
             <p class="eyebrow">05 / CONTACT</p>
@@ -482,10 +496,7 @@
                     required
                 ></textarea>
 
-                <button
-                    type="submit"
-                    class="btn btn-primary"
-                >
+                <button type="submit" class="btn btn-primary">
                     Send Message ↗
                 </button>
 
@@ -497,6 +508,7 @@
 
             </form>
 
+            <!-- CONTACT SOCIAL LINKS -->
             <div class="contact-socials">
 
                 <a
@@ -507,9 +519,8 @@
                     GitHub ↗
                 </a>
 
-                <!-- Replace with your actual LinkedIn profile URL -->
                 <a
-                    href="#"
+                    href="https://www.linkedin.com/in/ranveer-kumar-b472b4427/"
                     target="_blank"
                     rel="noopener noreferrer"
                 >
@@ -523,7 +534,7 @@
     </main>
 
 
-    <!-- ================= FOOTER ================= -->
+    <!-- FOOTER -->
     <footer class="footer">
         <div class="container">
 
@@ -538,7 +549,7 @@
     </footer>
 
 
-    <!-- Existing JavaScript file -->
+    <!-- EXISTING JAVASCRIPT -->
     <script src="script.js" defer></script>
 
 </body>

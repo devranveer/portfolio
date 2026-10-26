@@ -1,0 +1,157 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Certifications | My Portfolio</title>
+
+    <!-- Reuse your main portfolio styles -->
+    <link rel="stylesheet" href="../style.css">
+
+    <style>
+        .certificates-section {
+            max-width: 1000px;
+            margin: 80px auto;
+            padding: 30px 20px;
+        }
+
+        .certificates-heading {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .certificates-heading h1 {
+            font-size: 2.5rem;
+            margin-bottom: 12px;
+        }
+
+        .certificates-heading span {
+            color: #22c55e;
+        }
+
+        .certificates-heading p,
+        .certificate-card p {
+            color: #a1a1aa;
+            line-height: 1.7;
+        }
+
+        .certificate-card {
+            background: #111827;
+            border: 1px solid #263444;
+            border-radius: 16px;
+            padding: 30px;
+            transition: 0.3s ease;
+        }
+
+        .certificate-card:hover {
+            transform: translateY(-5px);
+            border-color: #22c55e;
+        }
+
+        .certificate-icon {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+        }
+
+        .certificate-card h2 {
+            color: #f9fafb;
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+        }
+
+        .certificate-actions {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin-top: 25px;
+        }
+
+        .certificate-btn {
+            display: inline-block;
+            padding: 12px 20px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: 0.3s ease;
+        }
+
+        .view-btn {
+            background: #22c55e;
+            color: #052e16;
+        }
+
+        .view-btn:hover {
+            background: #16a34a;
+        }
+
+        .back-btn {
+            border: 1px solid #22c55e;
+            color: #22c55e;
+        }
+
+        .back-btn:hover {
+            background: #22c55e;
+            color: #052e16;
+        }
+
+        @media (max-width: 600px) {
+            .certificates-section {
+                margin: 40px auto;
+                padding: 20px 16px;
+            }
+
+            .certificates-heading h1 {
+                font-size: 2rem;
+            }
+
+            .certificate-card {
+                padding: 22px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <main class="certificates-section">
+
+        <header class="certificates-heading">
+            <h1>My <span>Certifications</span></h1>
+            <p>Courses and certifications from my learning journey.</p>
+        </header>
+
+        <article class="certificate-card">
+            <div class="certificate-icon">🏆</div>
+
+            <h2>Supervised Machine Learning: Regression and Classification</h2>
+
+            <p><strong>Provider:</strong> DeepLearning.AI</p>
+            <p><strong>Platform:</strong> Coursera</p>
+
+            <p>
+                Learned the fundamentals of supervised machine learning,
+                including regression, classification, and model evaluation.
+            </p>
+
+            <div class="certificate-actions">
+                <a
+                    href="../assets/certificates/certificates.png"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="certificate-btn view-btn">
+                    View Certificate ↗
+                </a>
+
+                <a
+                    href="../index.html#certifications"
+                    class="certificate-btn back-btn">
+                    Back to Portfolio
+                </a>
+            </div>
+        </article>
+
+    </main>
+</body>
+</html>
+```

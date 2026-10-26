@@ -799,3 +799,37 @@ img {
         transition-duration: 0.01ms !important;
     }
 }
+
+
+/* Social links and icons */
+.social-links {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 14px;
+    margin-top: 24px;
+}
+
+.social-links a {
+    display: inline-flex;
+    align-items: center;
+    gap: 9px;
+    padding: 10px 16px;
+    border: 1px solid #263444;
+    border-radius: 8px;
+    color: #ffffff;
+    text-decoration: none;
+    transition: border-color 0.3s ease, transform 0.3s ease;
+}
+
+.social-links a:hover {
+    border-color: #22c55e;
+    transform: translateY(-3px);
+}
+
+.social-links img {
+    display: block;
+    width: 22px;
+    height: 22px;
+    object-fit: contain;
+}
