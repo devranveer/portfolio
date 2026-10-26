@@ -1,0 +1,171 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Ranveer's cat and dog image classification project.">
+
+    <title>Cat vs Dog Classifier | Ranveer</title>
+    <link rel="stylesheet" href="../style.css">
+
+    <style>
+        .project-detail {
+            width: min(900px, 90%);
+            margin: auto;
+            padding: 60px 0;
+        }
+
+        .back-link { color: var(--accent); text-decoration: none; }
+
+        .eyebrow {
+            color: var(--accent);
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-top: 40px;
+        }
+
+        .project-detail h1 {
+            font-size: clamp(2.5rem, 6vw, 4.5rem);
+            margin: 12px 0;
+        }
+
+        .intro {
+            color: var(--muted);
+            font-size: 1.1rem;
+            line-height: 1.8;
+            max-width: 750px;
+        }
+
+        .detail-section { margin-top: 40px; }
+
+        .detail-section p,
+        .detail-section li {
+            color: var(--muted);
+            line-height: 1.8;
+        }
+
+        .tech-stack, .project-links {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 18px;
+        }
+
+        .tech-stack span {
+            color: var(--accent);
+            border: 1px solid var(--accent);
+            border-radius: 20px;
+            padding: 7px 12px;
+        }
+
+        .project-links a {
+            padding: 12px 18px;
+            border: 1px solid var(--accent);
+            border-radius: 8px;
+            text-decoration: none;
+            color: var(--text);
+        }
+
+        .project-links a.primary {
+            background: var(--accent);
+            color: #07110a;
+        }
+    </style>
+</head>
+
+<body>
+    <main class="project-detail">
+
+        <a class="back-link" href="../index.html#projects">
+            ← Back to Portfolio
+        </a>
+
+        <p class="eyebrow">Machine Learning · Image Classification</p>
+
+        <h1>Cat vs Dog Classifier</h1>
+
+        <p class="intro">
+            An image classification project that predicts whether an
+            input image contains a cat or a dog. The application uses
+            a trained image model and ONNX Runtime Web for inference.
+        </p>
+
+        <div class="project-links">
+            <a class="primary"
+               href="https://devranveer.github.io/Cat-vs-Dog-classifier/"
+               target="_blank" rel="noopener noreferrer">
+                Try Live Demo ↗
+            </a>
+
+            <a href="https://github.com/devranveer"
+               target="_blank" rel="noopener noreferrer">
+                GitHub Profile ↗
+            </a>
+        </div>
+
+        <section class="detail-section">
+            <h2>The Problem</h2>
+            <p>
+                Identifying objects in images is a common computer vision
+                task. A classification model learns visual patterns from
+                labeled examples to distinguish between categories.
+            </p>
+        </section>
+
+        <section class="detail-section">
+            <h2>My Solution</h2>
+            <p>
+                I developed a cat-versus-dog image classifier using a
+                trained neural network. The model can be used by the web
+                application to generate a prediction from an image.
+            </p>
+        </section>
+
+        <section class="detail-section">
+            <h2>Key Features</h2>
+            <ul>
+                <li>Cat and dog image classification.</li>
+                <li>Image input through the web interface.</li>
+                <li>Trained model exported to ONNX format.</li>
+                <li>Browser-based inference using ONNX Runtime Web.</li>
+                <li>Live demo available online.</li>
+            </ul>
+        </section>
+
+        <section class="detail-section">
+            <h2>Technology Stack</h2>
+            <div class="tech-stack">
+                <span>Python</span>
+                <span>PyTorch</span>
+                <span>CNN</span>
+                <span>ONNX</span>
+                <span>ONNX Runtime Web</span>
+                <span>JavaScript</span>
+                <span>HTML</span>
+                <span>CSS</span>
+            </div>
+        </section>
+
+        <section class="detail-section">
+            <h2>What I Learned</h2>
+            <ul>
+                <li>How image classification works.</li>
+                <li>How neural networks learn visual features.</li>
+                <li>How to export models for deployment.</li>
+                <li>How to integrate a model into a browser application.</li>
+            </ul>
+        </section>
+
+        <section class="detail-section">
+            <h2>Project Status</h2>
+            <p>
+                A live demo is available. Model performance and
+                generalization can be improved through additional training,
+                data preparation, and evaluation.
+            </p>
+        </section>
+
+    </main>
+</body>
+</html>

@@ -1,26 +1,41 @@
 
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>Ranveer | Python Developer & AI/ML Engineer</title>
 
-    <meta name="description"
-          content="Ranveer's portfolio showcasing Python, FastAPI, backend development, and AI/ML projects.">
+    <meta
+        name="description"
+        content="Explore Ranveer's portfolio featuring Python development, FastAPI, backend projects, machine learning, and computer vision."
+    >
+
+    <meta name="theme-color" content="#0b0d12">
 
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
+    <!-- ================= HEADER ================= -->
     <header class="header">
-        <nav class="navbar container">
-            <a href="#home" class="logo">Ranveer<span>.</span></a>
+        <nav class="navbar container" aria-label="Main navigation">
 
-            <button class="menu-toggle" id="menu-toggle"
-                    aria-label="Toggle navigation"
-                    aria-expanded="false">
+            <a href="#home" class="logo">
+                Ranveer<span>.</span>
+            </a>
+
+            <button
+                class="menu-toggle"
+                id="menu-toggle"
+                type="button"
+                aria-label="Toggle navigation"
+                aria-controls="nav-links"
+                aria-expanded="false"
+            >
                 ☰
             </button>
 
@@ -32,224 +47,499 @@
                 <li><a href="#certifications">Certifications</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
+
         </nav>
     </header>
 
+
     <main>
-        <!-- HOME -->
+
+        <!-- ================= HOME ================= -->
         <section class="hero container" id="home">
-            <p class="eyebrow">PYTHON DEVELOPER · AI/ML ENTHUSIAST</p>
+
+            <p class="eyebrow">
+                PYTHON DEVELOPER · AI/ML ENTHUSIAST
+            </p>
 
             <h1>
-                Building useful products
-                <span>with code.</span>
+                Building useful software
+                <br>
+                with <span>Python & AI.</span>
             </h1>
 
             <p class="hero-description">
-                Hi, I'm Ranveer. I build backend applications using Python
-                and FastAPI and explore AI/ML to solve real-world problems.
+                Hi, I'm Ranveer. I'm a Computer Science student interested
+                in backend development, artificial intelligence, and
+                machine learning. I enjoy turning ideas into working
+                applications and learning by building projects.
             </p>
 
             <div class="hero-buttons">
-                <a href="#projects" class="btn btn-primary">Explore Projects ↗</a>
-                <a href="#contact" class="btn btn-secondary">Contact Me</a>
+                <a href="#projects" class="btn btn-primary">
+                    Explore Projects ↗
+                </a>
+
+                <a href="#contact" class="btn btn-secondary">
+                    Contact Me
+                </a>
             </div>
 
             <div class="social-links">
-                <a href="https://github.com/devranveer"
-                   target="_blank" rel="noopener noreferrer">GitHub ↗</a>
+                <a
+                    href="https://github.com/devranveer"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    GitHub ↗
+                </a>
 
-                <!-- Replace with your actual LinkedIn profile URL -->
-                <a href="#" id="linkedin-link">LinkedIn ↗</a>
+                <!-- Replace # with your actual LinkedIn profile URL -->
+                <a
+                    href="https://www.linkedin.com/in/ranveer-kumar-b472b4427?utm_source=share_via&utm_content=profile&utm_medium=member_android"
+                    id="linkedin-link"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    LinkedIn ↗
+                </a>
             </div>
 
             <div class="hero-note">
-                <span class="status-dot"></span>
-                Open to learning, collaboration and internship opportunities
+                Currently learning, building, and looking for opportunities.
             </div>
+
         </section>
 
-        <!-- ABOUT -->
+
+        <!-- ================= ABOUT ================= -->
         <section class="section container" id="about">
-            <p class="eyebrow">ABOUT</p>
+
+            <p class="eyebrow">01 / ABOUT ME</p>
+
             <h2>A little about me.</h2>
 
             <p class="section-description">
-                I'm a Computer Science student interested in backend
-                development, artificial intelligence and machine learning.
-                I enjoy building projects, learning new technologies,
-                and turning ideas into working applications.
+                I'm a Computer Science student focused on Python backend
+                development and AI/ML. I enjoy exploring new technologies,
+                building practical applications, and understanding how
+                software systems work behind the scenes.
             </p>
 
             <p class="section-description">
-                My current focus is Python, FastAPI, PostgreSQL,Machine Learning and
-                developing practical projects that solve real problems.
+                My current interests include REST APIs, databases,
+                machine learning models, and deploying applications.
+                I'm continuously improving my skills through hands-on
+                projects and structured learning.
             </p>
 
-            
+            <div class="about-highlights">
+
+                <article class="skill-card">
+                    <h3>Backend Development</h3>
+                    <p>
+                        Building APIs and working with databases using
+                        Python, FastAPI, and PostgreSQL.
+                    </p>
+                </article>
+
+                <article class="skill-card">
+                    <h3>Artificial Intelligence</h3>
+                    <p>
+                        Exploring machine learning, neural networks,
+                        and computer vision through projects.
+                    </p>
+                </article>
+
+                <article class="skill-card">
+                    <h3>Learning by Building</h3>
+                    <p>
+                        Turning concepts into projects and improving
+                        my development skills through practice.
+                    </p>
+                </article>
+
+            </div>
+
         </section>
 
-        <!-- SKILLS -->
+
+        <!-- ================= SKILLS ================= -->
         <section class="section container" id="skills">
-            <p class="eyebrow">SKILLS</p>
+
+            <p class="eyebrow">02 / SKILLS</p>
+
             <h2>Tools I work with.</h2>
 
+            <p class="section-description">
+                Technologies I've used in my learning and projects.
+                My experience varies by tool.
+            </p>
+
             <div class="skills-grid">
+
+                <article class="skill-card">
+                    <h3>Programming</h3>
+                    <div class="tags">
+                        <span>Python</span>
+                        
+                        <span>SQL</span>
+                    </div>
+                </article>
+
                 <article class="skill-card">
                     <h3>Backend</h3>
-                    <p>Python · FastAPI · REST APIs</p>
+                    <div class="tags">
+                        <span>FastAPI</span>
+                        <span>REST APIs</span>
+                        
+                    </div>
                 </article>
 
                 <article class="skill-card">
-                    <h3>Database</h3>
-                    <p>PostgreSQL · SQL · SQLAlchemy</p>
+                    <h3>Databases</h3>
+                    <div class="tags">
+                        <span>PostgreSQL</span>
+                        <span>Neon</span>
+                    </div>
                 </article>
 
                 <article class="skill-card">
-                    <h3>AI / ML</h3>
-                    <p>NumPy · Pandas · Matplotlib · Scikit-learn</p>
+                    <h3>AI & Machine Learning</h3>
+                    <div class="tags">
+                        <span>NumPy</span>
+                        <span>Pandas</span>
+                        <span>Matplotlib</span>
+                        <span>Scikit-learn</span>
+                        
+                    </div>
                 </article>
 
                 <article class="skill-card">
                     <h3>Frontend</h3>
-                    <p>HTML · CSS · JavaScript</p>
+                    <div class="tags">
+                        <span>HTML</span>
+                        <span>CSS</span>
+                        <span>JavaScript</span>
+                    </div>
                 </article>
 
                 <article class="skill-card">
                     <h3>Tools</h3>
-                    <p>Git · GitHub · VS Code</p>
+                    <div class="tags">
+                        <span>Git</span>
+                        <span>GitHub</span>
+                        <span>VS Code</span>
+                        <span>Docker</span>
+                    </div>
                 </article>
 
-                <article class="skill-card">
-                    <h3>Currently learning</h3>
-                    <p>Advanced backend development · Applied AI/ML</p>
-                </article>
             </div>
+
         </section>
 
-        <!-- PROJECTS -->
+
+        <!-- ================= PROJECTS ================= -->
         <section class="section container" id="projects">
-            <p class="eyebrow">SELECTED WORK</p>
+
+            <p class="eyebrow">03 / SELECTED WORK</p>
+
             <h2>Projects I've built.</h2>
 
+            <p class="section-description">
+                Practical projects exploring backend development,
+                machine learning, and computer vision.
+            </p>
+
             <div class="projects-grid">
+
+                <!-- PROJECT 01: LUXAR -->
                 <article class="project-card">
-                    <div class="project-number">PROJECT 01</div>
+
+                    <div class="project-number">
+                        PROJECT 01 · BACKEND
+                    </div>
+
                     <h3>Luxar</h3>
+
                     <p>
                         A business discovery platform with restaurant
-                        listings and an admin system for managing business
-                        information.
+                        listings and an admin system for managing
+                        business information.
                     </p>
+
                     <div class="tags">
                         <span>Python</span>
                         <span>FastAPI</span>
                         <span>PostgreSQL</span>
+                        <span>SQLAlchemy</span>
                     </div>
-                    <a href="pages/luxar.html" class="project-link">
-                        View project details ↗
-                    </a>
+
+                    <div class="project-actions">
+                        <a
+                            href="pages/luxar.html"
+                            class="project-link"
+                        >
+                            View details ↗
+                        </a>
+                    </div>
+
                 </article>
 
+
+                <!-- PROJECT 02: DIGIT RECOGNITION -->
                 <article class="project-card">
-                    <div class="project-number">PROJECT 02</div>
+
+                    <div class="project-number">
+                        PROJECT 02 · AI / ML
+                    </div>
+
                     <h3>Handwritten Digit Recognition</h3>
+
                     <p>
-                        A machine learning project that recognizes
-                        handwritten digits using a trained neural network.
+                        An application that recognizes handwritten
+                        digits using a trained convolutional neural
+                        network and an interactive drawing interface.
                     </p>
+
                     <div class="tags">
                         <span>Python</span>
                         <span>CNN</span>
                         <span>ONNX</span>
+                        <span>Machine Learning</span>
                     </div>
-                    <a href="pages/digit-recognition.html" class="project-link">
-                        View project details ↗
-                    </a>
+
+                    <div class="project-actions">
+
+                        <a
+                            href="pages/digit-recognition.html"
+                            class="project-link"
+                        >
+                            View details ↗
+                        </a>
+
+                        <a
+                            href="https://devranveer.github.io/Digit-prediction/"
+                            class="project-link"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            Live demo ↗
+                        </a>
+
+                    </div>
+
                 </article>
 
+
+                <!-- PROJECT 03: CAT VS DOG -->
                 <article class="project-card">
-                    <div class="project-number">PROJECT 03</div>
-                    <h3>Cat-vs-Dog-classifier</h3>
+
+                    <div class="project-number">
+                        PROJECT 03 · COMPUTER VISION
+                    </div>
+
+                    <h3>Cat vs Dog Classifier</h3>
+
                     <p>
-                        A deep learning image classification project built with PyTorch that accurately classifies images of cats and dogs using a Convolutional Neural Network (CNN). Includes training, evaluation, and an interactive prediction interface.
+                        An image classification application that uses
+                        a convolutional neural network to distinguish
+                        between images of cats and dogs.
                     </p>
+
                     <div class="tags">
                         <span>Python</span>
+                        <span>PyTorch</span>
                         <span>CNN</span>
                         <span>ONNX</span>
-                        <span>PyTorch</span>
                     </div>
-                    <a href="pages/Cat-vs-Dog-classifier.html" class="project-link">
-                        View project details ↗
-                    </a>
+
+                    <div class="project-actions">
+
+                        <a
+                            href="pages/Cat-vs-Dog-classifier.html"
+                            class="project-link"
+                        >
+                            View details ↗
+                        </a>
+
+                        <a
+                            href="https://devranveer.github.io/Cat-vs-Dog-classifier/"
+                            class="project-link"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            Live demo ↗
+                        </a>
+
+                    </div>
+
                 </article>
+
             </div>
+
+            <div class="projects-footer">
+                <a
+                    href="https://github.com/devranveer"
+                    class="btn btn-secondary"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    Explore My GitHub ↗
+                </a>
+            </div>
+
         </section>
 
-        <!-- CERTIFICATIONS -->
+
+        <!-- ================= CERTIFICATIONS ================= -->
         <section class="section container" id="certifications">
+
             <p class="eyebrow">04 / CERTIFICATIONS</p>
+
             <h2>What I've learned.</h2>
 
             <article class="certificate-card">
+
                 <div>
-                    <h3>Supervised Machine Learning: Regression and Classification</h3>
-                    <p>DeepLearning.AI · Coursera</p>
+                    <h3>
+                        Supervised Machine Learning:
+                        Regression and Classification
+                    </h3>
+
+                    <p>
+                        DeepLearning.AI · Stanford Online
+                    </p>
+
+                    <p>
+                        Covered foundational supervised learning
+                        concepts, regression, classification,
+                        and model evaluation.
+                    </p>
                 </div>
-                <span class="certificate-label">Machine Learning</span>
+
+                <!-- Add the actual certificate URL when available -->
+                <a
+                    href="#"
+                    class="project-link"
+                    id="certificate-link"
+                >
+                    View certificate ↗
+                </a>
+
             </article>
 
-            <p class="small-note">
-                Add your certificate image or verification link when ready.
-            </p>
         </section>
 
-        <!-- CONTACT -->
+
+        <!-- ================= CONTACT ================= -->
         <section class="section container" id="contact">
+
             <p class="eyebrow">05 / CONTACT</p>
+
             <h2>Let's build something useful.</h2>
 
             <p class="section-description">
                 Interested in working together, discussing a project,
-                or sharing an opportunity? Feel free to reach out.
+                or sharing an opportunity? Send me a message.
             </p>
 
             <form id="contact-form" class="contact-form">
+
                 <label for="name">Your name</label>
-                <input type="text" id="name" name="name"
-                       placeholder="Enter your name" required>
+
+                <input
+                    type="text"
+                    id="name"
+                    name="name"
+                    placeholder="Enter your name"
+                    minlength="2"
+                    maxlength="100"
+                    autocomplete="name"
+                    required
+                >
 
                 <label for="email">Your email</label>
-                <input type="email" id="email" name="email"
-                       placeholder="you@example.com" required>
 
-                <label for="message">Message</label>
-                <textarea id="message" name="message" rows="5"
-                          placeholder="Tell me about your idea..."
-                          required></textarea>
+                <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    placeholder="you@example.com"
+                    maxlength="255"
+                    autocomplete="email"
+                    required
+                >
 
-                <button type="submit" class="btn btn-primary">
+                <label for="message">Your message</label>
+
+                <textarea
+                    id="message"
+                    name="message"
+                    rows="6"
+                    minlength="5"
+                    maxlength="3000"
+                    placeholder="Tell me about your idea or opportunity..."
+                    required
+                ></textarea>
+
+                <button
+                    type="submit"
+                    class="btn btn-primary"
+                >
                     Send Message ↗
                 </button>
 
-                <p id="form-status" role="status"></p>
+                <p
+                    id="contact-status"
+                    role="status"
+                    aria-live="polite"
+                ></p>
+
             </form>
 
-            <p class="small-note">
-                The contact form will work after we connect it to FastAPI.
-            </p>
+            <div class="contact-socials">
+
+                <a
+                    href="https://github.com/devranveer"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    GitHub ↗
+                </a>
+
+                <!-- Replace with your actual LinkedIn profile URL -->
+                <a
+                    href="#"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    LinkedIn ↗
+                </a>
+
+            </div>
+
         </section>
+
     </main>
 
+
+    <!-- ================= FOOTER ================= -->
     <footer class="footer">
-        <div class="container footer-content">
-            <a href="#home" class="logo">Ranveer<span>.</span></a>
-            <p>Designed and built with curiosity.</p>
-            <p>© <span id="year"></span> Ranveer</p>
+        <div class="container">
+
+            <p>
+                © <span id="current-year"></span> Ranveer.
+                Built with HTML, CSS, and JavaScript.
+            </p>
+
+            <a href="#home">Back to top ↑</a>
+
         </div>
     </footer>
 
-    <script src="script.js"></script>
+
+    <!-- Existing JavaScript file -->
+    <script src="script.js" defer></script>
+
 </body>
 </html>

@@ -1,0 +1,176 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Luxar | Ranveer's Portfolio</title>
+
+    <!-- Reuse the styling from the main portfolio -->
+    <link rel="stylesheet" href="../style.css">
+
+    <!-- Extra styles for this project detail page -->
+    <style>
+        .project-detail {
+            width: min(900px, 90%);
+            margin: 0 auto;
+            padding: 60px 0;
+        }
+
+        .back-link {
+            color: var(--accent);
+            text-decoration: none;
+        }
+
+        .eyebrow {
+            color: var(--accent);
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-top: 40px;
+        }
+
+        .project-detail h1 {
+            font-size: clamp(2.8rem, 7vw, 5rem);
+            margin: 12px 0;
+        }
+
+        .intro {
+            color: var(--muted);
+            font-size: 1.1rem;
+            line-height: 1.8;
+            max-width: 700px;
+        }
+
+        .detail-section {
+            margin-top: 40px;
+        }
+
+        .detail-section p,
+        .detail-section li {
+            color: var(--muted);
+            line-height: 1.8;
+        }
+
+        .tech-stack {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .tech-stack span {
+            color: var(--accent);
+            border: 1px solid var(--accent);
+            padding: 7px 12px;
+            border-radius: 20px;
+        }
+
+        .project-link {
+            display: inline-block;
+            margin: 12px 10px 0 0;
+            padding: 12px 18px;
+            border: 1px solid var(--accent);
+            border-radius: 8px;
+            color: var(--text);
+            text-decoration: none;
+        }
+
+        .project-link.primary {
+            background: var(--accent);
+            color: #07110a;
+        }
+    </style>
+</head>
+
+<body>
+    <main class="project-detail">
+
+        <a class="back-link" href="../index.html#projects">
+            ← Back to Portfolio
+        </a>
+
+        <p class="eyebrow">Backend Development</p>
+
+        <h1>Luxar</h1>
+
+        <p class="intro">
+            A business discovery platform designed to organize business
+            information, manage records, and make details accessible
+            through dedicated pages and QR-based access.
+        </p>
+
+        <a class="project-link primary" href="#" target="_blank"
+           rel="noopener noreferrer">
+            GitHub Repository
+        </a>
+
+        <a class="project-link" href="#" target="_blank"
+           rel="noopener noreferrer">
+            Live Demo
+        </a>
+
+        <section class="detail-section">
+            <h2>The Problem</h2>
+            <p>
+                Business information such as contact details, opening hours,
+                photos, menus, and facilities can be scattered across
+                different platforms.
+            </p>
+        </section>
+
+        <section class="detail-section">
+            <h2>My Solution</h2>
+            <p>
+                Luxar is being developed as a platform for organizing
+                business data through a structured backend API and database.
+                Administrators can manage records, and visitors can access
+                business information through dedicated pages.
+            </p>
+        </section>
+
+        <section class="detail-section">
+            <h2>Key Features</h2>
+            <ul>
+                <li>FastAPI backend and structured API endpoints</li>
+                <li>Create, read, update, and delete business records</li>
+                <li>PostgreSQL database integration</li>
+                <li>Restaurant and menu information management</li>
+                <li>Modular routers, schemas, and database models</li>
+            </ul>
+        </section>
+
+        <section class="detail-section">
+            <h2>Technology Stack</h2>
+            <div class="tech-stack">
+                <span>Python</span>
+                <span>FastAPI</span>
+                <span>PostgreSQL</span>
+                <span>SQLAlchemy</span>
+                <span>Pydantic</span>
+                <span>HTML</span>
+                <span>CSS</span>
+                <span>JavaScript</span>
+            </div>
+        </section>
+
+        <section class="detail-section">
+            <h2>What I Learned</h2>
+            <ul>
+                <li>Designing and organizing REST API endpoints</li>
+                <li>Connecting FastAPI with PostgreSQL</li>
+                <li>Validating data using schemas</li>
+                <li>Separating backend logic into reusable modules</li>
+            </ul>
+        </section>
+
+        <section class="detail-section">
+            <h2>Project Status</h2>
+            <p>
+                In development. Features and deployment will continue
+                to improve as the project progresses.
+            </p>
+        </section>
+
+    </main>
+</body>
+</html>
