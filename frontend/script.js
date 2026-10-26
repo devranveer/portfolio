@@ -9,7 +9,7 @@ menuToggle.addEventListener("click", () => {
     menuToggle.setAttribute("aria-expanded", String(isOpen));
 });
 
-// Close the menu after selecting a navigation link.
+// Close the menu after clicking a navigation link.
 navLinks.querySelectorAll("a").forEach((link) => {
     link.addEventListener("click", () => {
         navLinks.classList.remove("open");

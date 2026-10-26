@@ -15,6 +15,13 @@
 
     <meta name="theme-color" content="#0b0d12">
 
+    <!-- Technology icons -->
+    <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css"
+    >
+
+    <!-- Main stylesheet -->
     <link rel="stylesheet" href="style.css">
 </head>
 
@@ -62,7 +69,7 @@
             </p>
 
             <h1>
-                Building useful software
+                Building Projects
                 <br>
                 with <span>Python & AI.</span>
             </h1>
@@ -84,7 +91,7 @@
                 </a>
             </div>
 
-            <!-- SOCIAL LINKS WITH ICONS -->
+            <!-- SOCIAL LINKS -->
             <div class="social-links">
 
                 <a
@@ -93,33 +100,31 @@
                     rel="noopener noreferrer"
                     aria-label="Visit my GitHub profile"
                 >
-                    <img
-                        src="https://cdn.simpleicons.org/github/ffffff"
-                        alt=""
-                        width="22"
-                        height="22"
-                    >
+                    <i
+                        class="devicon-github-original"
+                        aria-hidden="true"
+                    ></i>
                     <span>GitHub ↗</span>
                 </a>
 
-                
                 <a
                     href="https://www.linkedin.com/in/ranveer-kumar-b472b4427/"
                     target="_blank"
                     rel="noopener noreferrer"
                     aria-label="Visit my LinkedIn profile"
                 >
-                <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="22"
-                    height="22"
-                    viewBox="0 0 24 24"
-                    fill="#0A66C2"
-                    aria-hidden="true"
-                >
-                <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.35V9h3.414v1.561h.049c.476-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 1 1 0-4.124 2.062 2.062 0 0 1 0 4.124zM3.56 9h3.558v11.452H3.56V9zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
-                </svg>
-                 <span>LinkedIn ↗</span>
+                    <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="22"
+                        height="22"
+                        viewBox="0 0 24 24"
+                        fill="#0A66C2"
+                        aria-hidden="true"
+                    >
+                        <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.35V9h3.414v1.561h.049c.476-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 1 1 0-4.124 2.062 2.062 0 0 1 0 4.124zM3.56 9h3.558v11.452H3.56V9zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                    </svg>
+
+                    <span>LinkedIn ↗</span>
                 </a>
 
             </div>
@@ -186,7 +191,7 @@
         <!-- SKILLS -->
         <section class="section container" id="skills">
 
-            <p class="eyebrow">02 / SKILLS</p>
+            <p class="eyebrow">02 / MY SKILLS</p>
 
             <h2>Tools I work with.</h2>
 
@@ -197,56 +202,170 @@
 
             <div class="skills-grid">
 
+                <!-- PROGRAMMING -->
                 <article class="skill-card">
                     <h3>Programming</h3>
-                    <div class="tags">
-                        <span>Python</span>
-                        <span>SQL</span>
+
+                    <div class="skill-icons">
+
+                        <div class="skill-item">
+                            <i class="devicon-python-plain colored"
+                               aria-hidden="true"></i>
+                            <span>Python</span>
+                        </div>
+
+                        <div class="skill-item">
+                            <i class="devicon-azuresqldatabase-plain colored"
+                               aria-hidden="true"></i>
+                            <span>SQL</span>
+                        </div>
+
                     </div>
                 </article>
 
+
+                <!-- BACKEND -->
                 <article class="skill-card">
                     <h3>Backend</h3>
-                    <div class="tags">
-                        <span>FastAPI</span>
-                        <span>REST APIs</span>
+
+                    <div class="skill-icons">
+
+                        <div class="skill-item">
+                            <i class="devicon-fastapi-plain"
+                               aria-hidden="true"></i>
+                            <span>FastAPI</span>
+                        </div>
+
+                        <div class="skill-item">
+                            <i class="devicon-python-plain colored"
+                               aria-hidden="true"></i>
+                            <span>REST APIs</span>
+                        </div>
+
                     </div>
                 </article>
 
+
+                <!-- DATABASES -->
                 <article class="skill-card">
                     <h3>Databases</h3>
-                    <div class="tags">
-                        <span>PostgreSQL</span>
-                        <span>Neon</span>
+
+                    <div class="skill-icons">
+
+                        <div class="skill-item">
+                            <i class="devicon-postgresql-plain colored"
+                               aria-hidden="true"></i>
+                            <span>PostgreSQL</span>
+                        </div>
+
+                        <div class="skill-item">
+                            <i class="devicon-neon-plain"
+                               aria-hidden="true"></i>
+                            <span>Neon</span>
+                        </div>
+
                     </div>
                 </article>
 
+
+                <!-- AI AND MACHINE LEARNING -->
                 <article class="skill-card">
                     <h3>AI & Machine Learning</h3>
-                    <div class="tags">
-                        <span>NumPy</span>
-                        <span>Pandas</span>
-                        <span>Matplotlib</span>
-                        <span>Scikit-learn</span>
+
+                    <div class="skill-icons">
+
+                        <div class="skill-item">
+                            <i class="devicon-numpy-plain colored"
+                               aria-hidden="true"></i>
+                            <span>NumPy</span>
+                        </div>
+
+                        <div class="skill-item">
+                            <i class="devicon-pandas-plain colored"
+                               aria-hidden="true"></i>
+                            <span>Pandas</span>
+                        </div>
+
+                        <div class="skill-item">
+                            <i class="devicon-matplotlib-plain colored"
+                               aria-hidden="true"></i>
+                            <span>Matplotlib</span>
+                        </div>
+
+                        <div class="skill-item">
+                            <i class="devicon-scikitlearn-plain colored"
+                               aria-hidden="true"></i>
+                            <span>Scikit-learn</span>
+                        </div>
+
+                        <div class="skill-item">
+                            <i class="devicon-pytorch-original colored"
+                               aria-hidden="true"></i>
+                            <span>PyTorch</span>
+                        </div>
+
                     </div>
                 </article>
 
+
+                <!-- FRONTEND -->
                 <article class="skill-card">
                     <h3>Frontend</h3>
-                    <div class="tags">
-                        <span>HTML</span>
-                        <span>CSS</span>
-                        <span>JavaScript</span>
+
+                    <div class="skill-icons">
+
+                        <div class="skill-item">
+                            <i class="devicon-html5-plain colored"
+                               aria-hidden="true"></i>
+                            <span>HTML</span>
+                        </div>
+
+                        <div class="skill-item">
+                            <i class="devicon-css3-plain colored"
+                               aria-hidden="true"></i>
+                            <span>CSS</span>
+                        </div>
+
+                        <div class="skill-item">
+                            <i class="devicon-javascript-plain colored"
+                               aria-hidden="true"></i>
+                            <span>JavaScript</span>
+                        </div>
+
                     </div>
                 </article>
 
+
+                <!-- TOOLS -->
                 <article class="skill-card">
                     <h3>Tools</h3>
-                    <div class="tags">
-                        <span>Git</span>
-                        <span>GitHub</span>
-                        <span>VS Code</span>
-                        <span>Docker</span>
+
+                    <div class="skill-icons">
+
+                        <div class="skill-item">
+                            <i class="devicon-git-plain colored"
+                               aria-hidden="true"></i>
+                            <span>Git</span>
+                        </div>
+
+                        <div class="skill-item">
+                            <i class="devicon-github-original"
+                               aria-hidden="true"></i>
+                            <span>GitHub</span>
+                        </div>
+
+                        <div class="skill-item">
+                            <i class="devicon-vscode-plain colored"
+                               aria-hidden="true"></i>
+                            <span>VS Code</span>
+                        </div>
+
+                        <div class="skill-item">
+                            <i class="devicon-docker-plain colored"
+                               aria-hidden="true"></i>
+                            <span>Docker</span>
+                        </div>
+
                     </div>
                 </article>
 
@@ -420,9 +539,7 @@
                         Regression and Classification
                     </h3>
 
-                    <p>
-                        DeepLearning.AI · Coursera
-                    </p>
+                    <p>DeepLearning.AI · Coursera</p>
 
                     <p>
                         Covered foundational supervised learning
@@ -508,6 +625,7 @@
 
             </form>
 
+
             <!-- CONTACT SOCIAL LINKS -->
             <div class="contact-socials">
 
@@ -549,8 +667,9 @@
     </footer>
 
 
-    <!-- EXISTING JAVASCRIPT -->
+    <!-- JAVASCRIPT -->
     <script src="script.js" defer></script>
 
 </body>
+
 </html>

@@ -2,6 +2,7 @@
 /* =========================================
    RANVEER'S PORTFOLIO
    Dark, minimalist, responsive design
+   Interactive buttons, links and cards
 ========================================= */
 
 /* ---------- 1. Variables and Reset ---------- */
@@ -9,16 +10,19 @@
 :root {
     --bg: #0b0d10;
     --surface: #12151a;
-    --border: #252a32;
+    --surface-hover: #191e27;
+    --border: #252b39;
     --text: #f2f4f7;
     --muted: #a1a8b3;
     --accent: #a5f36b;
-    --accent-hover: #aab5ff;
-    --border: #252b39;
+    --accent-hover: #c1ff91;
     --success: #78d6a3;
 
     --container-width: 1100px;
     --header-height: 76px;
+
+    --transition-fast: 0.2s ease;
+    --transition-normal: 0.3s ease;
 }
 
 * {
@@ -54,6 +58,7 @@ textarea {
 a {
     color: inherit;
     text-decoration: none;
+    -webkit-tap-highlight-color: transparent;
 }
 
 button,
@@ -62,17 +67,9 @@ textarea {
     font: inherit;
 }
 
-button,
-a {
+button {
     -webkit-tap-highlight-color: transparent;
-}
-
-button:focus-visible,
-a:focus-visible,
-input:focus-visible,
-textarea:focus-visible {
-    outline: 2px solid var(--accent);
-    outline-offset: 4px;
+    cursor: pointer;
 }
 
 img {
@@ -90,6 +87,15 @@ img {
     margin-inline: auto;
 }
 
+/* Accessible keyboard focus */
+button:focus-visible,
+a:focus-visible,
+input:focus-visible,
+textarea:focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 4px;
+}
+
 
 /* ---------- 2. Header and Navigation ---------- */
 
@@ -97,8 +103,8 @@ img {
     position: sticky;
     top: 0;
     z-index: 100;
-
     height: var(--header-height);
+
     background: rgba(11, 13, 18, 0.88);
     border-bottom: 1px solid rgba(255, 255, 255, 0.06);
 
@@ -118,10 +124,15 @@ img {
     font-size: 1.55rem;
     font-weight: 800;
     letter-spacing: -1px;
+    transition: opacity var(--transition-fast);
 }
 
 .logo span {
     color: var(--accent);
+}
+
+.logo:hover {
+    opacity: 0.8;
 }
 
 .nav-links {
@@ -132,25 +143,64 @@ img {
 }
 
 .nav-links a {
+    position: relative;
+    display: inline-block;
+    padding: 6px 0;
     color: var(--muted);
     font-size: 0.9rem;
-    transition: color 0.2s ease;
+
+    transition: color var(--transition-fast);
+}
+
+/* Animated underline */
+.nav-links a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 2px;
+    background: var(--accent);
+
+    transition: width var(--transition-normal);
 }
 
 .nav-links a:hover,
 .nav-links a.active {
-    color: var(--text);
+    color: var(--accent);
+}
+
+.nav-links a:hover::after,
+.nav-links a.active::after {
+    width: 100%;
 }
 
 .menu-toggle {
     display: none;
+    align-items: center;
+    justify-content: center;
+
     border: 1px solid var(--border);
     border-radius: 8px;
     padding: 7px 12px;
+
     background: var(--surface);
     color: var(--text);
     font-size: 1.25rem;
-    cursor: pointer;
+
+    transition:
+        color var(--transition-fast),
+        border-color var(--transition-fast),
+        transform var(--transition-fast);
+}
+
+.menu-toggle:hover {
+    color: var(--accent);
+    border-color: var(--accent);
+}
+
+.menu-toggle:active {
+    transform: scale(0.94);
 }
 
 
@@ -216,6 +266,9 @@ img {
     margin-bottom: 28px;
 }
 
+
+/* ---------- 4. Interactive Buttons ---------- */
+
 .btn {
     display: inline-flex;
     align-items: center;
@@ -233,13 +286,19 @@ img {
     cursor: pointer;
 
     transition:
-        background 0.2s ease,
-        border-color 0.2s ease,
-        transform 0.2s ease;
+        background-color var(--transition-normal),
+        border-color var(--transition-normal),
+        color var(--transition-normal),
+        transform var(--transition-normal),
+        box-shadow var(--transition-normal);
 }
 
 .btn:hover {
-    transform: translateY(-2px);
+    transform: translateY(-3px);
+}
+
+.btn:active {
+    transform: scale(0.97);
 }
 
 .btn-primary {
@@ -249,6 +308,7 @@ img {
 
 .btn-primary:hover {
     background: var(--accent-hover);
+    box-shadow: 0 8px 26px rgba(165, 243, 107, 0.16);
 }
 
 .btn-secondary {
@@ -258,27 +318,71 @@ img {
 }
 
 .btn-secondary:hover {
-    background: var(--surface);
+    background: var(--surface-hover);
     border-color: var(--accent);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
 }
+
+
+/* ---------- 5. Social Links and Icons ---------- */
 
 .social-links,
 .contact-socials {
     display: flex;
     flex-wrap: wrap;
-    gap: 24px;
+    align-items: center;
+    gap: 14px;
+}
+
+.social-links {
+    margin-top: 24px;
 }
 
 .social-links a,
 .contact-socials a {
+    display: inline-flex;
+    align-items: center;
+    gap: 9px;
+
+    padding: 10px 16px;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+
     color: var(--muted);
     font-size: 0.9rem;
-    transition: color 0.2s ease;
+
+    transition:
+        color var(--transition-normal),
+        border-color var(--transition-normal),
+        background-color var(--transition-normal),
+        transform var(--transition-normal);
 }
 
 .social-links a:hover,
 .contact-socials a:hover {
     color: var(--accent);
+    border-color: var(--accent);
+    background: rgba(165, 243, 107, 0.04);
+    transform: translateY(-3px);
+}
+
+.social-links img,
+.social-links svg,
+.social-links i {
+    width: 22px;
+    height: 22px;
+    flex-shrink: 0;
+    transition: transform var(--transition-normal);
+}
+
+.social-links i {
+    font-size: 22px;
+}
+
+.social-links a:hover img,
+.social-links a:hover svg,
+.social-links a:hover i {
+    transform: scale(1.12);
 }
 
 .hero-note {
@@ -290,7 +394,7 @@ img {
 }
 
 
-/* ---------- 4. Shared Sections ---------- */
+/* ---------- 6. Shared Sections ---------- */
 
 .section {
     padding-top: 80px;
@@ -314,7 +418,7 @@ img {
 }
 
 
-/* ---------- 5. About Section ---------- */
+/* ---------- 7. About Section ---------- */
 
 .about-highlights {
     display: grid;
@@ -323,12 +427,20 @@ img {
     margin-top: 34px;
 }
 
+
+/* Shared card styles */
 .skill-card,
 .project-card,
 .certificate-card {
     background: var(--surface);
     border: 1px solid var(--border);
     border-radius: 14px;
+
+    transition:
+        transform var(--transition-normal),
+        border-color var(--transition-normal),
+        background-color var(--transition-normal),
+        box-shadow var(--transition-normal);
 }
 
 .skill-card {
@@ -346,8 +458,15 @@ img {
     line-height: 1.8;
 }
 
+.about-highlights .skill-card:hover {
+    transform: translateY(-5px);
+    background: var(--surface-hover);
+    border-color: var(--accent);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.18);
+}
 
-/* ---------- 6. Skills Section ---------- */
+
+/* ---------- 8. Skills Section ---------- */
 
 .skills-grid {
     display: grid;
@@ -356,20 +475,65 @@ img {
     margin-top: 34px;
 }
 
-.skills-grid .skill-card {
+#skills .skill-card {
     min-width: 0;
-    transition:
-        border-color 0.2s ease,
-        background 0.2s ease;
 }
 
-.skills-grid .skill-card:hover {
+#skills .skill-card:hover {
+    transform: translateY(-5px);
     background: var(--surface-hover);
-    border-color: #39415a;
+    border-color: var(--accent);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.18);
+}
+
+#skills .skill-card h3 {
+    margin-bottom: 22px;
+}
+
+/* Technology icon layout */
+.skill-icons {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 22px 18px;
+}
+
+.skill-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 9px;
+
+    min-width: 65px;
+    color: var(--muted);
+    font-size: 0.8rem;
+    text-align: center;
+}
+
+.skill-item i {
+    font-size: 34px;
+    transition:
+        transform var(--transition-normal),
+        filter var(--transition-normal);
+}
+
+.skill-item:hover i {
+    transform: translateY(-4px) scale(1.12);
+    filter: brightness(1.2);
+}
+
+.skill-item span {
+    transition: color var(--transition-fast);
+}
+
+.skill-item:hover span {
+    color: var(--text);
 }
 
 
-/* ---------- 7. Technology Tags ---------- */
+/* ---------- 9. Technology Tags ---------- */
 
 .tags {
     display: flex;
@@ -382,7 +546,6 @@ img {
 .tags span {
     display: inline-flex;
     align-items: center;
-
     padding: 5px 10px;
 
     border: 1px solid var(--border);
@@ -393,10 +556,23 @@ img {
 
     font-size: 0.76rem;
     line-height: 1.5;
+
+    transition:
+        color var(--transition-fast),
+        background-color var(--transition-fast),
+        border-color var(--transition-fast),
+        transform var(--transition-fast);
+}
+
+.tags span:hover {
+    color: var(--accent);
+    background: rgba(165, 243, 107, 0.06);
+    border-color: rgba(165, 243, 107, 0.5);
+    transform: translateY(-2px);
 }
 
 
-/* ---------- 8. Projects Section ---------- */
+/* ---------- 10. Projects Section ---------- */
 
 .projects-grid {
     display: grid;
@@ -413,21 +589,14 @@ img {
     min-width: 0;
     min-height: 340px;
     padding: 28px;
-
     overflow: hidden;
-
-    transition:
-        transform 0.25s ease,
-        border-color 0.25s ease,
-        box-shadow 0.25s ease,
-        background 0.25s ease;
 }
 
 .project-card:hover {
-    transform: translateY(-5px);
+    transform: translateY(-6px);
     background: var(--surface-hover);
-    border-color: #454f70;
-    box-shadow: 0 16px 40px rgba(0, 0, 0, 0.18);
+    border-color: var(--accent);
+    box-shadow: 0 16px 40px rgba(0, 0, 0, 0.2);
 }
 
 .project-number {
@@ -481,8 +650,8 @@ img {
     font-weight: 650;
 
     transition:
-        color 0.2s ease,
-        gap 0.2s ease;
+        color var(--transition-normal),
+        gap var(--transition-normal);
 }
 
 .project-link:hover {
@@ -505,7 +674,7 @@ img {
 }
 
 
-/* ---------- 9. Certifications ---------- */
+/* ---------- 11. Certifications ---------- */
 
 .certificate-card {
     display: flex;
@@ -515,6 +684,13 @@ img {
 
     margin-top: 30px;
     padding: 28px;
+}
+
+.certificate-card:hover {
+    transform: translateY(-4px);
+    background: var(--surface-hover);
+    border-color: var(--accent);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.18);
 }
 
 .certificate-card > div {
@@ -539,7 +715,7 @@ img {
 }
 
 
-/* ---------- 10. Contact Section ---------- */
+/* ---------- 12. Contact Section ---------- */
 
 .contact-form {
     display: flex;
@@ -568,7 +744,10 @@ img {
     color: var(--text);
     font-size: 0.95rem;
 
-    transition: border-color 0.2s ease;
+    transition:
+        border-color var(--transition-normal),
+        background-color var(--transition-normal),
+        box-shadow var(--transition-normal);
 }
 
 .contact-form input::placeholder,
@@ -576,9 +755,16 @@ img {
     color: #737d91;
 }
 
+.contact-form input:hover,
+.contact-form textarea:hover {
+    border-color: #515b6e;
+}
+
 .contact-form input:focus,
 .contact-form textarea:focus {
+    background: var(--surface-hover);
     border-color: var(--accent);
+    box-shadow: 0 0 0 3px rgba(165, 243, 107, 0.1);
     outline: none;
 }
 
@@ -603,7 +789,7 @@ img {
 }
 
 
-/* ---------- 11. Footer ---------- */
+/* ---------- 13. Footer ---------- */
 
 .footer {
     padding: 26px 0;
@@ -623,12 +809,19 @@ img {
     font-size: 0.82rem;
 }
 
+.footer a {
+    transition:
+        color var(--transition-normal),
+        transform var(--transition-normal);
+}
+
 .footer a:hover {
     color: var(--accent);
+    transform: translateY(-2px);
 }
 
 
-/* ---------- 12. Tablet Layout ---------- */
+/* ---------- 14. Tablet Layout ---------- */
 
 @media (max-width: 900px) {
     .nav-links {
@@ -650,7 +843,7 @@ img {
 }
 
 
-/* ---------- 13. Mobile Navigation ---------- */
+/* ---------- 15. Mobile Navigation ---------- */
 
 @media (max-width: 700px) {
     :root {
@@ -658,13 +851,11 @@ img {
     }
 
     .container {
-        width: min(100% - 36px, var(--container-width));
+        width: min(calc(100% - 36px), var(--container-width));
     }
 
     .menu-toggle {
         display: inline-flex;
-        align-items: center;
-        justify-content: center;
     }
 
     .navbar {
@@ -690,14 +881,18 @@ img {
         border-radius: 0 0 12px 12px;
     }
 
-    .nav-links.active {
-        display: flex;
+    .nav-links.open {
+    display: flex;
     }
 
     .nav-links li a {
         display: block;
         padding: 12px 8px;
         font-size: 0.95rem;
+    }
+
+    .nav-links a::after {
+        bottom: 5px;
     }
 
     .hero {
@@ -756,7 +951,7 @@ img {
 }
 
 
-/* ---------- 14. Small Mobile Screens ---------- */
+/* ---------- 16. Small Mobile Screens ---------- */
 
 @media (max-width: 400px) {
     .container {
@@ -784,52 +979,26 @@ img {
     .contact-form button {
         width: 100%;
     }
-}
 
-
-/* ---------- 15. Accessibility ---------- */
-
-@media (prefers-reduced-motion: reduce) {
-    *,
-    *::before,
-    *::after {
-        scroll-behavior: auto !important;
-        animation-duration: 0.01ms !important;
-        animation-iteration-count: 1 !important;
-        transition-duration: 0.01ms !important;
+    .skill-icons {
+        gap: 20px 14px;
     }
 }
 
 
-/* Social links and icons */
-.social-links {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    gap: 14px;
-    margin-top: 24px;
-}
+/* ---------- 17. Accessibility ---------- */
 
-.social-links a {
-    display: inline-flex;
-    align-items: center;
-    gap: 9px;
-    padding: 10px 16px;
-    border: 1px solid #263444;
-    border-radius: 8px;
-    color: #ffffff;
-    text-decoration: none;
-    transition: border-color 0.3s ease, transform 0.3s ease;
-}
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
 
-.social-links a:hover {
-    border-color: #22c55e;
-    transform: translateY(-3px);
-}
-
-.social-links img {
-    display: block;
-    width: 22px;
-    height: 22px;
-    object-fit: contain;
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
 }
