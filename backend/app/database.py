@@ -1,12 +1,20 @@
 
+import os
 from sqlalchemy import create_engine
 from sqlalchemy.orm import declarative_base, sessionmaker
+from dotenv import load_dotenv
 
-DATABASE_URL = "sqlite:///./portfolio.db"
+load_dotenv()
 
+DATABASE_URL = os.getenv("DATABASE_URL")
+
+if not DATABASE_URL:
+    raise RuntimeError("DATABASE_URL environment variable is missing")
+
+# Connect SQLAlchemy to PostgreSQL.
 engine = create_engine(
     DATABASE_URL,
-    connect_args={"check_same_thread": False}
+    pool_pre_ping=True
 )
 
 SessionLocal = sessionmaker(

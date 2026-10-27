@@ -2,15 +2,15 @@
 from fastapi import FastAPI
 
 from app.database import Base, engine
-from app.models.project import Project
 from app.models.contact import Contact
-from app.routers import projects, contact
+from app.routers import contact
 
+# Create database tables when the application starts.
 Base.metadata.create_all(bind=engine)
 
 app = FastAPI(title="Ranveer Portfolio API")
 
-app.include_router(projects.router)
+# Register the contact API routes.
 app.include_router(contact.router)
 
 
