@@ -17,7 +17,7 @@ app.add_middleware(
     allow_origins=[
         "https://portfolio-frontend-lilac-three.vercel.app",
         "https://devranveer.github.io",
-        "http://localhost:5173",
+        "https://portfolio-p6q3.onrender.com/api/contact/",
     ],
     allow_credentials=False,
     allow_methods=["GET", "POST", "DELETE", "OPTIONS"],
