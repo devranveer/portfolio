@@ -11,15 +11,19 @@ Base.metadata.create_all(bind=engine)
 app = FastAPI(title="Ranveer Portfolio API")
 
 # Allow requests from your GitHub Pages website.
+
 app.add_middleware(
     CORSMiddleware,
     allow_origins=[
+        "https://portfolio-frontend-lilac-three.vercel.app",
         "https://devranveer.github.io",
+        "http://localhost:5173",
     ],
     allow_credentials=False,
     allow_methods=["GET", "POST", "DELETE", "OPTIONS"],
     allow_headers=["Content-Type"],
 )
+
 
 app.include_router(contact.router)
 
