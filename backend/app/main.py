@@ -1,16 +1,26 @@
 
 from fastapi import FastAPI
+from fastapi.middleware.cors import CORSMiddleware
 
 from app.database import Base, engine
 from app.models.contact import Contact
 from app.routers import contact
 
-# Create database tables when the application starts.
 Base.metadata.create_all(bind=engine)
 
 app = FastAPI(title="Ranveer Portfolio API")
 
-# Register the contact API routes.
+# Allow requests from your GitHub Pages website.
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=[
+        "https://devranveer.github.io",
+    ],
+    allow_credentials=False,
+    allow_methods=["GET", "POST", "DELETE", "OPTIONS"],
+    allow_headers=["Content-Type"],
+)
+
 app.include_router(contact.router)
 
 
