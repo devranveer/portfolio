@@ -3,72 +3,91 @@ const menuToggle = document.getElementById("menu-toggle");
 const navLinks = document.getElementById("nav-links");
 
 // Open and close the mobile navigation menu.
-menuToggle.addEventListener("click", () => {
-    const isOpen = navLinks.classList.toggle("open");
-
-    menuToggle.setAttribute("aria-expanded", String(isOpen));
-});
-
-// Close the menu after clicking a navigation link.
-navLinks.querySelectorAll("a").forEach((link) => {
-    link.addEventListener("click", () => {
-        navLinks.classList.remove("open");
-        menuToggle.setAttribute("aria-expanded", "false");
+if (menuToggle && navLinks) {
+    menuToggle.addEventListener("click", () => {
+        const isOpen = navLinks.classList.toggle("open");
+        menuToggle.setAttribute("aria-expanded", String(isOpen));
     });
-});
+
+    // Close the menu after clicking a navigation link.
+    navLinks.querySelectorAll("a").forEach((link) => {
+        link.addEventListener("click", () => {
+            navLinks.classList.remove("open");
+            menuToggle.setAttribute("aria-expanded", "false");
+        });
+    });
+}
 
 // Automatically update the copyright year.
-document.getElementById("year").textContent = new Date().getFullYear();
+const yearElement = document.getElementById("year");
 
+if (yearElement) {
+    yearElement.textContent = new Date().getFullYear();
+}
 
+// Contact form configuration.
 const contactForm = document.getElementById("contact-form");
-const formStatus = document.getElementById("form-status");
-
-// Replace this with your deployed FastAPI backend URL.
-// Do not use localhost for a live GitHub Pages website.
+const contactStatus = document.getElementById("contact-status");
 const API_URL = "https://portfolio-p6q3.onrender.com/api/contact/";
 
-contactForm.addEventListener("submit", async (event) => {
-    event.preventDefault();
+// Submit the contact form to the FastAPI backend.
+if (contactForm && contactStatus) {
+    contactForm.addEventListener("submit", async (event) => {
+        event.preventDefault();
 
-    const formData = new FormData(contactForm);
+        const submitButton = contactForm.querySelector(
+            'button[type="submit"]'
+        );
 
-    const contactData = {
-        name: formData.get("name").trim(),
-        email: formData.get("email").trim(),
-        message: formData.get("message").trim()
-    };
+        const formData = new FormData(contactForm);
 
-    formStatus.textContent = "Sending message...";
+        const contactData = {
+            name: formData.get("name").trim(),
+            email: formData.get("email").trim(),
+            message: formData.get("message").trim()
+        };
 
-    try {
-        const response = await fetch(API_URL, {
-            method: "POST",
-            headers: {
-                "Content-Type": "application/json"
-            },
-            body: JSON.stringify(contactData)
-        });
+        contactStatus.textContent = "Sending your message...";
 
-        const result = await response.json();
-
-        if (!response.ok) {
-            throw new Error(
-                result.detail
-                    ? JSON.stringify(result.detail)
-                    : "Unable to send your message."
-            );
+        if (submitButton) {
+            submitButton.disabled = true;
         }
 
-        formStatus.textContent =
-            "Message sent successfully! Thank you for contacting me.";
+        try {
+            const response = await fetch(API_URL, {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify(contactData)
+            });
 
-        contactForm.reset();
+            const result = await response.json();
 
-    } catch (error) {
-        console.error("Contact form error:", error);
+            if (!response.ok) {
+                const errorDetail = Array.isArray(result.detail)
+                    ? result.detail.map((item) => item.msg).join(", ")
+                    : result.detail;
 
-        formStatus.textContent =
-            "Could not send your message. Please try again later.";
-    }
-});
+                throw new Error(
+                    errorDetail || "Unable to send your message."
+                );
+            }
+
+            contactStatus.textContent =
+                "Message sent successfully! Thank you for contacting me.";
+
+            contactForm.reset();
+
+        } catch (error) {
+            console.error("Contact form error:", error);
+
+            contactStatus.textContent =
+                "Could not send your message. Please try again later.";
+        } finally {
+            if (submitButton) {
+                submitButton.disabled = false;
+            }
+        }
+    });
+}
