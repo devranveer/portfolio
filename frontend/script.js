@@ -26,7 +26,7 @@ const formStatus = document.getElementById("form-status");
 
 // Replace this with your deployed FastAPI backend URL.
 // Do not use localhost for a live GitHub Pages website.
-const API_URL = "YOUR_DEPLOYED_BACKEND_URL/api/contact/";
+const API_URL = "https://portfolio-p6q3.onrender.com/api/contact/";
 
 contactForm.addEventListener("submit", async (event) => {
     event.preventDefault();
